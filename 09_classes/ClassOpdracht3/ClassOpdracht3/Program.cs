@@ -12,7 +12,7 @@ namespace ClassOpdracht3
             //1) maak een nieuwe class aan die je GameEngine noemt       (gebruik rechter muis op het project ClassOpdracht3->add->new class
 
             //2) maak hier een nieuwe instance aan van GameEngine
-
+            GameEngine smile = new GameEngine();
             //3)  plak deze function hieronder in GameEngine:
            
             /*
@@ -28,7 +28,7 @@ namespace ClassOpdracht3
 
             //4) roep hier de rungameloop aan 
            
-
+            smile.RunGameLoop();
 
         }
     }

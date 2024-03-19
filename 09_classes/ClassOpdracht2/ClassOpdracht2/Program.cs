@@ -8,9 +8,9 @@ namespace ClassOpdracht2
         {
             Console.WriteLine("Hello, World!");
             //maak hier een variable aan met type ShopGreeter
-
+            ShopGreeter greeter = new ShopGreeter();
             //roep de function greetcustomer aan
-			????
+            greeter.GreetCustomer();
         }
     }
 }

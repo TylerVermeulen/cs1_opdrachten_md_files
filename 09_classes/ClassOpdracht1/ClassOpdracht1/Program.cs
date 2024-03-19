@@ -2,7 +2,7 @@ using System;
 
 namespace ClassOpdracht1
 {
-     ???
+     
     //Schrijf met commentaar(//dit is commentaar) in deze file de naam bij elk onderdeel 
     internal class ClassStructureExercise
     {
@@ -12,13 +12,13 @@ namespace ClassOpdracht1
         {
             this.accountName = accountName;
         }
-
+        // ShowGreetingInConsole
         internal void ShowGreetingInConsole()
         {
             string greeting = "hello";
             Console.WriteLine(greeting + " " + accountName);
         }
-
+        // Show1To10
         internal void Show1To10()
         {
             for (int i = 0; i < 10; i++)
@@ -26,7 +26,7 @@ namespace ClassOpdracht1
                 Console.WriteLine(i.ToString());
             }
         }
-
+        // DistBetweenPoints
         internal double DistBetweenPoints(int x1, int y1, int x2, int y2)
         {
 
@@ -39,6 +39,7 @@ namespace ClassOpdracht1
             return length;
 
         }
+        // MultiplyToPower2
         internal int MultiplyToPower2(int value)
         {
             int result = value * value;

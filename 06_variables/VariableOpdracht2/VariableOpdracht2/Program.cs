@@ -13,10 +13,15 @@ namespace VariableOpdracht2
 
             //geef nu de stream de volgende waardes:
             //name, waarde: je favoriete streamer
+            twitchStream.name = "AWOOGA";
             //lastStreamName, waarde: de streamname van de laatste keer
+            twitchStream.laststreamname = "Playing STS";
             //streamGame, waarde een nieuwe instance van Game (new Game("naam van de game hier"})
+            twitchStream.streamGame = new Game("STS");
             //followers, waarde: hoeveel followers
+            twitchStream.followers = 1343213;
             //automod, waarde: staat automod aan?
+            twitchStream.automod = true;
 
 
             Console.WriteLine("Hello, World!");

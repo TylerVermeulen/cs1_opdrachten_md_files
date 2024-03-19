@@ -13,21 +13,21 @@ namespace IfOpdracht3
             //een lekker ijsje, alleen welke smaken kiezen we?
 
             //maak van 2 false hieronder true
-            bool chocola = false;
-            bool vanilla = false;
+            bool chocola = true;
+            bool vanilla = true;
             bool aardbei = false;
 
 
 
-            if (false)//test hier of je chocola AND vanilla hebt gekozen 
+            if (vanilla == true && chocola == true)//test hier of je chocola AND vanilla hebt gekozen 
             {
                 Console.WriteLine("hier is je chocola vanilla ijsje"); 
             }
-            else if (false)//test hier of je chocola AND aardbei hebt gekozen 
+            else if (chocola == true && aardbei == true)//test hier of je chocola AND aardbei hebt gekozen 
             {
                 Console.WriteLine("hier is je chocola aardbei ijsje"); 
             }
-            else if (false)//test hier of je vanilla AND aardbei hebt gekozen 
+            else if (vanilla == true && aardbei == true)//test hier of je vanilla AND aardbei hebt gekozen 
             {
                 Console.WriteLine("hier is je vanilla aardbei ijsje"); 
             }
