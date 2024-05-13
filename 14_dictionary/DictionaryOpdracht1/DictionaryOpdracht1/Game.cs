@@ -29,9 +29,9 @@ namespace DictionaryOpdracht1
         private void WarpToRoom(string warpTo)
         {
             //haal warpTo heeft de key (Name) van de Room, gebruik die om de ROom uit de dictionary te halen
-            Room target = ???;
+            Room target = rooms[warpTo];
             //geef this.currentRoom als waarde target
-            currentRoom = ????;
+            currentRoom = target;
             Console.WriteLine("player warped to " + currentRoom.Name);
         }
 
@@ -44,13 +44,25 @@ namespace DictionaryOpdracht1
                 WarpBackward = "start",//UITLEG:: gaat naar zichzelf om niet te crashen
                 WarpForward = "spookkamer"
             };
-
+            Room spookkamer = new Room
+            {
+                Name = "spookkamer",
+                WarpBackward = "start",
+                WarpForward = "magmaroom"
+            };
+            Room magmaroom = new Room
+            {
+                Name = "magmaroom",
+                WarpBackward = "spookkamer",
+                WarpForward = "endroom"
+            };
             //voeg nu de start kamer toe aan de dictionary met de Add method.
             //gebruik Name als key
-            rooms.Add(???,????);
+            rooms.Add(start.Name,start);
 
             //voeg nog 2 kamers toe, leg de verbindingen (WarpBackward en WarpForward) goed let op de Name van de Room waar je heen wil!
-            ????
+            rooms.Add(spookkamer.Name, spookkamer);
+            rooms.Add(magmaroom.Name, magmaroom);
         }
     }
 }

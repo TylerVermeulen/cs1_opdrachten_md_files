@@ -8,9 +8,9 @@ namespace FunctionOpdracht1
         {
             //eerst even uit de static ontsnappen
             Program program = new Program();
-            
-            program.//roep hier de function Run aan
-            program.//roep hier de function ShowThis aan
+
+            program.Run();//roep hier de function Run aan
+            program.ShowThis("Big money");//roep hier de function ShowThis aan
         }
 
         private void Run()

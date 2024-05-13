@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace DictionaryOpdracht3
 {
@@ -11,14 +12,16 @@ namespace DictionaryOpdracht3
         {
             MonsterMaker orcMaker = new MonsterMaker() { Name = "orc" };
             MonsterMaker slimeMaker = new MonsterMaker() { Name = "slime" };
-
+            MonsterMaker lamiaMaker = new MonsterMaker() { Name = "lamia" };
+            MonsterMaker dryadMaker = new MonsterMaker() { Name = "dryad" };
             //voeg de orc en slime toe aan de dictionary
 
             makers.Add(orcMaker.Name, orcMaker);
-            makers.Add(???,???);
-
+            makers.Add(slimeMaker.Name, slimeMaker);
+            makers.Add(lamiaMaker.Name, lamiaMaker);
+            makers.Add(dryadMaker.Name, dryadMaker);
             //maak nog 2 andere monstermakers aan
-            ????
+            
 
             MakeRooms();
         }
@@ -33,7 +36,21 @@ namespace DictionaryOpdracht3
 
 
             //maak nog 3 andere rooms aan. in de array voor index 1,2 & 3
-            ???
+            rooms[1] = new Room()
+            {
+                allowedMonsters = new string[] { "slime" },
+                monsters = new Monster[2]
+            };
+            rooms[2] = new Room()
+            {
+                allowedMonsters = new string[] { "lamia" },
+                monsters = new Monster[2]
+            };
+            rooms[3] = new Room()
+            {
+                allowedMonsters = new string[] { "dryad" },
+                monsters = new Monster[2]
+            };
 
         }
 
@@ -45,16 +62,16 @@ namespace DictionaryOpdracht3
 
             //maak een monster voor elke monster in de room, gebruik room.monsters
             
-            for (int i = 0; i < ???; i++)
+            for (int i = 0; i < room.monsters.Length; i++)
             {
                 //selecteer een monster type uit room.allowedMonsters met de random, zie ook de room random
-                string toMake = ????;
+                string toMake = room.allowedMonsters[random.Next(room.allowedMonsters.Length)];
 
                 //haal de maker op uit de dictionary op basis van de naam
-                MonsterMaker maker = ????;
+                MonsterMaker maker = makers[toMake];
                 Monster m = maker.Make();
                 Console.WriteLine(m.Name);
-                room.monsters[???] = ???;//zet het monster in de kamer
+                room.monsters[i] = m;//zet het monster in de kamer
             }
         }
     }

@@ -8,8 +8,8 @@ namespace ArrayOpdracht1
         {
             Console.WriteLine("Hello, World!");
 
-            int[] array; //maak hier een nieuwe array van met new int[10];
-
+            int[] array = new int[10]; //maak hier een nieuwe array van met new int[10];
+            
             //kijk nu wat er gebeurt als je het programma runt
             for (int i = 0; i < array.Length; i++)
             {

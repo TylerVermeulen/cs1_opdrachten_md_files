@@ -9,7 +9,10 @@ namespace ForOpdracht1
             string[] straten = new string[] { "contactweg", "dintelstraat" };
 
             //type nu hieronder for, dan druk je de TAB toets in, achter i < zet je straten.Length
-
+            for (int i = 0; i < straten.Length; i++)
+            {
+                Console.WriteLine(straten[i]);
+            }
 
             //in de for loop schrijf je nu een Console.WriteLine() met tussen de haakjes straten[i]
 

@@ -17,6 +17,11 @@ namespace FunctionOpdracht4
 
 
         //1) maak hier een function AddNumbers die 3 argumenten heeft
+        internal int AddNumbers(int number1, int number2, int number3)
+        {
+            int result = number1 + number2 + number3;
+            return result;
+        }
         //2) de function telt de 3 argumenten bij elkaar op en geeft dat als resultaat terug
 
     }

@@ -8,7 +8,7 @@ namespace ArrayOpdracht4
         {
             Console.WriteLine("Hello, World!");
             //maak een array van 10 enemies het onderstaande code blok gaat werken
-
+            Enemy[] enemies = new Enemy[10];
 
             for (int i = 0; i < enemies.Length; i++)
             {

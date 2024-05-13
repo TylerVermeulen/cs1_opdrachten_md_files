@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 
 namespace FunctionOpdracht5
 {
@@ -14,7 +15,21 @@ namespace FunctionOpdracht5
             program.Run();
         }
 
-
+        internal bool IsHeroDead()
+        {
+            if (health <= 0) return true;
+            else return false;
+        }
+        internal int RollDamage()
+        {
+            int damage = 100;
+            return damage;
+        }
+        internal int DoDamageToHero(int damage)
+        {
+            health = health - damage;
+            return health;
+        }
         private void Run()
         {
 
@@ -26,6 +41,7 @@ namespace FunctionOpdracht5
             SetHeroStrength(9999);//super sterk natuurlijk
 
             //1) roep hier de SetHealth aan met een 1000;
+            SetHealth(1000);
 
             while(IsHeroDead())//4) maak deze function, deze geeft een true  terug als health <= 0, anders geeft deze false terug
             {
@@ -43,8 +59,16 @@ namespace FunctionOpdracht5
         }
 
         //2) maak hier een function GetHeroName die met Console.ReadLine() een helden naam vraagt
-
+        internal string GetHeroName()
+        {
+            heroName = Console.ReadLine();
+            return heroName;
+        }
         //3) maak hier een function SetHeroStrength met 1 argument  van type 'int'
+        internal void SetHeroStrength(int SetheroStrength)
+        {
+            heroStrength = SetheroStrength;
+        }
         //in de body van de function zet de waarde van heroStrength (van program) het 
 
         //

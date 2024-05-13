@@ -16,20 +16,22 @@ namespace DictionaryOpdracht2
             Dictionary<string, EvoMonster> monsters = new Dictionary<string, EvoMonster>();
 
 
-            EvoMonster pickelChu = new EvoMonster() { Name = "pickleChu", EvolvesTo = "most popular" };
+            EvoMonster pickelChu = new EvoMonster() { Name = "pickleChu", EvolvesTo = "most_popular" };
             EvoMonster boosDraakje = new EvoMonster() { Name = "boosDraakje", EvolvesTo = "nog koppiger" };
-
+            EvoMonster most_popular = new EvoMonster() { Name = "most_popular", EvolvesTo = ""}; 
 
 
 
             //voeg de bovenstaande monsters toe
-			???
+            monsters.Add(pickelChu.Name, pickelChu);
+            monsters.Add(boosDraakje.Name, boosDraakje);
+            monsters.Add(most_popular.Name, most_popular);
 
 
 
 
             //kies een monster uit de dictionary
-            EvoMonster ikKiesJouw = ???;
+            EvoMonster ikKiesJouw = monsters["pickleChu"];
 
             Console.WriteLine(ikKiesJouw.Name + " wants to evolve may it? (y/n)");
             if (Console.ReadLine() == "y")

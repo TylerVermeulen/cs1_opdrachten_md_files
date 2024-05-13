@@ -9,17 +9,25 @@ namespace FunctionOpdracht3
 			//eerst even uit de static ontsnappen
             Program program = new Program();
 
-            program.//3) roep hier de function aan
+            program.AskForAge();//3) roep hier de function aan
 
             //1) zet deze 3 regels in een function (AskForAge) in program, en roep deze aan 
-                Console.WriteLine("What is your age?");
-                string age = Console.ReadLine();
-                Console.WriteLine($"You're age is {age}");
+            
+                //Console.WriteLine("What is your age?");
+                //string age = Console.ReadLine();
+                //Console.WriteLine($"You're age is {age}");
+            
             //eind
 
 
         }
 
         //2) maak hier je function met naam AskForAge
+        internal void AskForAge()
+        {
+            Console.WriteLine("What is your age?");
+            string age = Console.ReadLine();
+            Console.WriteLine($"You're age is {age}");
+        }
     }
 }

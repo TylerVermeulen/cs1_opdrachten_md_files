@@ -11,7 +11,7 @@ namespace ForOpdracht2
 
             for (int i = 0; i < straten.Length; i++)
             {
-                string straat = ????;// haal de waarde uit de straten array die op index i staat met []
+                string straat = straten[i];// haal de waarde uit de straten array die op index i staat met []
                 Console.WriteLine(straat);
             }
         }
